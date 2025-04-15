@@ -1,5 +1,6 @@
 ﻿string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
-void ExibirTextoNaTela()
+List<string> listaDasBandas = new List<string>{"Charlie Brown Jr", "Nirvana", "Calipso"};
+void ExibirLogo()
 {
     Console.WriteLine(@"
 ░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
@@ -13,6 +14,7 @@ void ExibirTextoNaTela()
 
 void ExibirOpcoesDoMenu()
 {
+    ExibirLogo();
     Console.WriteLine("\nDigite 1 para registrar uma banda.");
     Console.WriteLine("Digite 2 para mostrar todas as bandas.");
     Console.WriteLine("Digite 3 para avaliar uma banda.");
@@ -23,11 +25,12 @@ void ExibirOpcoesDoMenu()
     string opcaoEscolhida = Console.ReadLine()!;
     int opcaoNumericaEscolhida = int.Parse(opcaoEscolhida);
     
+    
     switch (opcaoNumericaEscolhida) 
     {
-        case 1: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 1: RegistrarBanda();
         break;
-        case 2: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 2: ExibirNomesDasBandas();
         break;
         case 3: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
         break;
@@ -40,5 +43,41 @@ void ExibirOpcoesDoMenu()
     }
 }
 
-ExibirTextoNaTela();
+void RegistrarBanda()
+{
+    Console.Clear();
+    Console.WriteLine("\n*********************");
+    Console.WriteLine("Registro de bandas");
+    Console.WriteLine("*********************\n");
+    Console.Write("Digite o nome da banda que deseja registrar: ");
+    string nomeDaBanda = Console.ReadLine()!;
+    listaDasBandas.Add(nomeDaBanda);
+    Console.WriteLine($"A banda {nomeDaBanda} foi registrada com sucesso.");
+    Thread.Sleep(4000);
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+}
+
+void ExibirNomesDasBandas()
+{
+    Console.Clear();
+    Console.WriteLine("*********************");
+    Console.WriteLine("Lista de bandas:");
+    Console.WriteLine("*********************\n");
+    //for (int i = 0; i < listaDasBandas.Count; i++)
+    //{
+    //    Console.WriteLine($"Banda: {listaDasBandas[i]}");
+    //}
+    foreach (string listaDasBandasFinal in listaDasBandas)
+    {
+        Console.WriteLine($"Banda: {listaDasBandasFinal}");
+    }
+    Console.WriteLine("\nDigite qualquer tecla para continuar");
+    Console.ReadKey();
+    Console.Clear();
+    ExibirOpcoesDoMenu();
+
+}
+
+
 ExibirOpcoesDoMenu();
