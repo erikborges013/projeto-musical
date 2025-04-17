@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("c# projeto musical")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+89e09a9efe373170df6e01155f16294149797fcf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7226d2ff6cf1468a632378e52371a9bcc88d2b65")]
 [assembly: System.Reflection.AssemblyProductAttribute("c# projeto musical")]
 [assembly: System.Reflection.AssemblyTitleAttribute("c# projeto musical")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
