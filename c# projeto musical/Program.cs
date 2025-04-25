@@ -1,4 +1,6 @@
-﻿string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
+﻿using System.Net.Http.Headers;
+
+string mensagemDeBoasVindas = "Boas vindas ao Screen Sound";
 //List<string> listaDasBandas = new List<string>{"Charlie Brown Jr", "Nirvana", "Calipso"};
 Dictionary<string, List<int>> bandasRegistradas = new Dictionary<string, List<int>>();
 bandasRegistradas.Add("Charlie Brown Jr", new List<int> {10, 9, 8});
@@ -38,7 +40,7 @@ void ExibirOpcoesDoMenu()
         break;
         case 3: AvaliarUmaBanda();
         break;
-        case 4: Console.WriteLine("Você escolheu a opção: " + opcaoNumericaEscolhida);
+        case 4: MostrarMediaDeNotas();
         break;
         case -1: Console.WriteLine("Bye Bye *");
         break;
@@ -113,6 +115,35 @@ void AvaliarUmaBanda()
         Console.Clear();
         ExibirOpcoesDoMenu();
     }
+}
+
+void MostrarMediaDeNotas()
+{
+    string bandaEscolhidaParaVerMedia;
+
+    while (true)
+    {
+    Console.Clear();
+    ExibirTituloNaTela("Média das avaliações");
+    Console.Write("Digite o nome da banda que você deseja ver a média de avaliações: ");
+    bandaEscolhidaParaVerMedia = Console.ReadLine()!;
+
+    if (!bandasRegistradas.ContainsKey(bandaEscolhidaParaVerMedia))
+    {
+        Console.WriteLine($"A banda {bandaEscolhidaParaVerMedia} não existe. Tente novamente!");
+        Thread.Sleep(3000);
+    } else
+    {
+        break;
+    }
+    }
+    
+    double mediaDaBandaEscolhida = bandasRegistradas[bandaEscolhidaParaVerMedia].Average();
+    Console.WriteLine($"A média de avaliações da banda {bandaEscolhidaParaVerMedia} é: {mediaDaBandaEscolhida}");
+    Console.Write("Aperte qualquer tecla para voltar ao menu principal");
+    Console.ReadKey();
+    ExibirOpcoesDoMenu();
+
 }
 
 ExibirOpcoesDoMenu();

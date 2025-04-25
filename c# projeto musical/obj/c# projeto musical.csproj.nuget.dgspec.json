@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Boug 3\\Desktop\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj": {}
+    "C:\\Users\\Boug 3\\Videos\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Boug 3\\Desktop\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj": {
+    "C:\\Users\\Boug 3\\Videos\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Boug 3\\Desktop\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj",
+        "projectUniqueName": "C:\\Users\\Boug 3\\Videos\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj",
         "projectName": "c# projeto musical",
-        "projectPath": "C:\\Users\\Boug 3\\Desktop\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj",
+        "projectPath": "C:\\Users\\Boug 3\\Videos\\projeto-musical\\c# projeto musical\\c# projeto musical.csproj",
         "packagesPath": "C:\\Users\\Boug 3\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Boug 3\\Desktop\\projeto-musical\\c# projeto musical\\obj\\",
+        "outputPath": "C:\\Users\\Boug 3\\Videos\\projeto-musical\\c# projeto musical\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Boug 3\\AppData\\Roaming\\NuGet\\NuGet.Config"
